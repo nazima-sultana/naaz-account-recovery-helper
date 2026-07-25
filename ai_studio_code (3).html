@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Recovery Helper | Secure Your Digital Life</title>
+    <!-- Tailwind CSS for Dark Security Theme Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyberDark: '#0a0f1d',
+                        cyberCard: '#131c31',
+                        cyberAccent: '#10b981', // Neon green for security feel
+                        cyberAlert: '#ef4444' // Warning red
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.active {
+            max-height: 1000px; /* high enough to contain content */
+        }
+        .rotate-icon {
+            transition: transform 0.3s ease;
+        }
+        .rotate-icon.active {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-cyberDark text-gray-200 font-sans min-h-screen pb-12">
+
+    <!-- Header Section -->
+    <header class="border-b border-gray-800 bg-cyberCard py-6 mb-8 shadow-md">
+        <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-shield-halved text-cyberAccent text-3xl"></i>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold tracking-wide text-white">Account Recovery Helper</h1>
+                    <p class="text-xs md:text-sm text-gray-400">Hacked accounts ko safe aur recover karne ki aasan guide</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 space-y-6">
+
+        <!-- Urgent Alert Box -->
+        <div class="bg-red-950/40 border border-cyberAlert/50 rounded-lg p-4 md:p-5 flex items-start space-x-4 shadow-lg">
+            <div class="bg-cyberAlert/10 p-2 rounded-lg text-cyberAlert shrink-0">
+                <i class="fa-solid fa-triangle-exclamation text-xl md:text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="text-cyberAlert font-bold text-base md:text-lg mb-1">Urgently Yeh Pehle Karein!</h3>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    Agar aapka koi ek account hack hua hai, toh hacker aapke baki accounts ko bhi target kar sakta hai. 
+                    <strong>Sabse pehle apne primary Gmail/Email account aur baki sensitive apps ke passwords badlein</strong> 
+                    aur unme 2-Step Verification (2FA) on karein.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section Title -->
+        <div class="pt-4">
+            <h2 class="text-lg md:text-xl font-semibold text-white mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-unlock-keyhole text-cyberAccent"></i> Platform Recovery Guides
+            </h2>
+            <p class="text-xs md:text-sm text-gray-400">Niche diye gaye platforms me se jisme problem hai, uspar click karke official recovery steps follow karein:</p>
+        </div>
+
+        <!-- Collapsible Container -->
+        <div class="space-y-4">
+
+            <!-- Instagram Section -->
+            <div class="bg-cyberCard border border-gray-800 rounded-lg overflow-hidden shadow-md">
+                <button onclick="toggleAccordion('instagram-content', 'instagram-icon')" class="w-full flex justify-between items-center p-4 md:p-5 focus:outline-none hover:bg-gray-800/30 transition-colors">
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-brands fa-instagram text-pink-500 text-2xl"></i>
+                        <span class="text-base md:text-lg font-semibold text-white">Instagram Account Recovery</span>
+                    </div>
+                    <i id="instagram-icon" class="fa-solid fa-chevron-down text-gray-400 rotate-icon"></i>
+                </button>
+                <div id="instagram-content" class="accordion-content">
+                    <div class="p-4 md:p-5 border-t border-gray-800/60 bg-slate-900/40 text-sm leading-relaxed space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-cyberAccent/20 text-cyberAccent font-bold px-2 py-0.5 rounded text-xs mt-0.5">1</span>
+                                <p><strong class="text-white">Email Check Karein:</strong> Apne registered email inbox me <code class="bg-gray-800 px-1 py-0.5 rounded text-pink-300 text-xs">security@mail.instagram.com</code> se aaya koi mail check karein. Agar hacker ne email badla hoga, toh aapko "Revert this change" ka option mil sakta hai.</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-cyberAccent/20 text-cyberAccent font-bold px-2 py-0.5 rounded text-xs mt-0.5">2</span>
+                                <p><strong class="text-white">Login Link Request Karein:</strong> Login screen par "Get help logging in" (Android) ya "Forgot password?" (iOS) par click karein aur apna username ya phone number dalein.</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-cyberAccent/20 text-cyberAccent font-bold px-2 py-0.5 rounded text-xs mt-0.5">3</span>
+                                <p><strong class="text-white">Identity Verification:</strong> Agar upar diye steps kaam nahi karte, toh "Need more help?" par click karein. Agar aapke account me aapki photos hain, toh Instagram aapko ek video selfie lene ko kahega jisse aapki identity verify ho sake.</p>
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <a href="https://www.instagram.com/hacked/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded text-xs md:text-sm transition-colors">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>Official Instagram Recovery Page</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Snapchat Section -->
+            <div class="bg-cyberCard border border-gray-800 rounded-lg overflow-hidden shadow-md">
+                <button onclick="toggleAccordion('snapchat-content', 'snapchat-icon')" class="w-full flex justify-between items-center p-4 md:p-5 focus:outline-none hover:bg-gray-800/30 transition-colors">
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-brands fa-snapchat text-yellow-400 text-2xl"></i>
+                        <span class="text-base md:text-lg font-semibold text-white">Snapchat Account Recovery</span>
+                    </div>
+                    <i id="snapchat-icon" class="fa-solid fa-chevron-down text-gray-400 rotate-icon"></i>
+                </button>
+                <div id="snapchat-content" class="accordion-content">
+                    <div class="p-4 md:p-5 border-t border-gray-800/60 bg-slate-900/40 text-sm leading-relaxed space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-cyberAccent/20 text-cyberAccent font-bold px-2 py-0.5 rounded text-xs mt-0.5">1</span>
+                                <p><strong class="text-white">Password Reset Try Karein:</strong> Snapchat login page par "Forgot my password" par click karein aur Email ya SMS ke jariye reset karne ki koshish karein.</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-cyberAccent/20 text-cyberAccent font-bold px-2 py-0.5 rounded text-xs mt-0.5">2</span>
+                                <p><strong class="text-white">Support Team se Contact karein:</strong> Agar hacker ne email aur phone number dono badal diye hain, toh bina deri kiye Snapchat Support portal par jaakar ticket submit karein.</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-cyberAccent/20 text-cyberAccent font-bold px-2 py-0.5 rounded text-xs mt-0.5">3</span>
+                                <p><strong class="text-white">Form Details:</strong> Form me apna original email, phone number aur username dalein jo account bante waqt use kiya tha, taki verify karne me aasan ho.</p>
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <a href="https://support.snapchat.com/en-US/article/hacked-account" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 px-4 rounded text-xs md:text-sm transition-colors">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>Official Snapchat Support Page</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WhatsApp Section -->
+            <div class="bg-cyberCard border border-gray-800 rounded-lg overflow-hidden shadow-md">
+                <button onclick="toggleAccordion('whatsapp-content', 'whatsapp-icon')" class="w-full flex justify-between items-center p-4 md:p-5 focus:outline-none hover:bg-gray-800/30 transition-colors">
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-brands fa-whatsapp text-emerald-500 text-2xl"></i>
+                        <span class="text-base md:text-lg font-semibold text-white">WhatsApp Account Recovery</span>
+                    </div>
+                    <i id="whatsapp-icon" class="fa-solid fa-chevron-down text-gray-400 rotate-icon"></i>
+                </button>
+                <div id="whatsapp-content" class="accordion-content">
+                    <div class="p-4 md:p-5 border-t border-gray-800/60 bg-slate-900/40 text-sm leading-relaxed space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-cyberAccent/20 text-cyberAccent font-bold px-2 py-0.5 rounded text-xs mt-0.5">1</span>
+                                <p><strong class="text-white">Re-register Karein:</strong> Apne phone me WhatsApp open karein aur apna phone number enter karke OTP generate karein.</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-cyberAccent/20 text-cyberAccent font-bold px-2 py-0.5 rounded text-xs mt-0.5">2</span>
+                                <p><strong class="text-white">Automatic Log Out:</strong> Jaise hi aap 6-digit SMS code enter karenge, hacker ke device se aapka WhatsApp automatically logout ho jayega.</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="bg-cyberAccent/20 text-cyberAccent font-bold px-2 py-0.5 rounded text-xs mt-0.5">3</span>
+                                <p><strong class="text-white">2FA Pin Problem:</strong> Agar hacker ne Two-step verification lagaya hua hai aur pin maang raha hai, toh aapko <strong class="text-white">7 days</strong> ka wait karna hoga. Uske baad bina pin ke login ho jayega, lekin hacker tab tak aapka account use nahi kar payega kyunki SMS OTP aapke paas hai.</p>
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <a href="https://www.whatsapp.com/contact/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded text-xs md:text-sm transition-colors">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>Official WhatsApp Support</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Safety Tips Card -->
+        <div class="bg-cyberCard border border-gray-800 rounded-lg p-5 md:p-6 shadow-md">
+            <h3 class="text-white text-lg font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-shield text-cyberAccent"></i> Future Safety Tips (Account Safe Kaise Rakhein)
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
+                <div class="space-y-2 p-3 bg-slate-900/30 rounded border border-gray-800/50">
+                    <h4 class="font-semibold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-key text-cyberAccent text-xs"></i> 1. Strong Password Banayein
+                    </h4>
+                    <p class="text-xs">Apne passwords me symbols (@, #, $), numbers, aur mix upper-lowercase letters ka use karein. Har app ke liye alag password rakhein.</p>
+                </div>
+                <div class="space-y-2 p-3 bg-slate-900/30 rounded border border-gray-800/50">
+                    <h4 class="font-semibold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-mobile-screen-button text-cyberAccent text-xs"></i> 2. Two-Factor Authentication (2FA)
+                    </h4>
+                    <p class="text-xs">Instagram, Snapchat aur WhatsApp par Two-Factor settings me jaakar enable karein. Isse bina OTP ya authenticator app code ke login nahi hoga.</p>
+                </div>
+                <div class="space-y-2 p-3 bg-slate-900/30 rounded border border-gray-800/50">
+                    <h4 class="font-semibold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-ban text-cyberAccent text-xs"></i> 3. Phishing Se Bachein
+                    </h4>
+                    <p class="text-xs">Kisi bhi aisi link par click na karein jo "Free followers" ya "Gift cards" dene ka dawa karti ho, yeh account hack karne ka trap ho sakta hai.</p>
+                </div>
+                <div class="space-y-2 p-3 bg-slate-900/30 rounded border border-gray-800/50">
+                    <h4 class="font-semibold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-user-lock text-cyberAccent text-xs"></i> 4. Login Sessions Monitor Karein
+                    </h4>
+                    <p class="text-xs">Regularly settings me jaakar "Active Logins" ya "Logged in devices" check karein aur unknown devices ko remove kar dein.</p>
+                </div>
+            </div>
+
+            <!-- Cybercrime Govt Portal -->
+            <div class="mt-6 pt-5 border-t border-gray-800/60 text-center">
+                <p class="text-xs text-gray-400 mb-3">Agar aapke sath koi financial fraud ya bada personal data breach hua hai, toh official government portal par report karein:</p>
+                <a href="https://www.cybercrime.gov.in/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold py-2.5 px-5 rounded text-xs md:text-sm transition-colors">
+                    <i class="fa-solid fa-gavel"></i>
+                    <span>cybercrime.gov.in (Report Cyber Crime Here)</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-12 text-center text-xs text-gray-500 max-w-4xl mx-auto px-4">
+        <p>© 2026 Account Recovery Helper. Yeh ek informational guide hai. Hum kisi bhi platform se officially affiliated nahi hain.</p>
+    </footer>
+
+    <!-- JavaScript to Handle Accordions -->
+    <script>
+        function toggleAccordion(contentId, iconId) {
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById(iconId);
+            
+            // Toggle active state
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                icon.classList.remove('active');
+            } else {
+                // Close other accordions first (Optional)
+                closeAllAccordions();
+                
+                content.classList.add('active');
+                icon.classList.add('active');
+            }
+        }
+
+        function closeAllAccordions() {
+            const contents = document.querySelectorAll('.accordion-content');
+            const icons = document.querySelectorAll('.rotate-icon');
+            
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            icons.forEach(icon => {
+                icon.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
